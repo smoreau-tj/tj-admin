@@ -1,24 +1,12 @@
 const express = require('express');
+const { } = require('../controllers/items');
 const router = express.Router()
 
 
-
 router.get('/', (req, res) => {
-  res.status(200).json({
-    "success": true,
-    "msg": `received Query Successfully ${req.query.query}`,
-    "data": [
-      {
-        "id": 5576,
-        "title": "Product A",
-        "groups": [
-          { "id": 17, "title": "Group A" }
-        ]
-      }
-    ]
-  })
+  
 })
-
+// get items by id
 router.get('/:id', (req, res) => {
   res.status(200).json({
     "success": true,
@@ -34,6 +22,7 @@ router.get('/:id', (req, res) => {
   })
 })
 
+//
 router.get('/:id/groups', (req, res) => {
   res.status(200).json({
     "success": true,
